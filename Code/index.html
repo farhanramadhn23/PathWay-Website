@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Orbitron:wght@700&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-    <title>Jerseycustom.com</title>
+    <title>PathWay.com</title>
 </head>
 
 <body>
@@ -46,9 +46,8 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Model</th>
-                        <th>Category</th>
-                        <th>Order</th>
+                        <th>Theme</th>
+                        <th>Genre</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -56,14 +55,13 @@
                         <td>{{ content.id }}</td>
                         <td>{{ content.title }}</td>
                         <td>{{ content.category }}</td>
-                        <td>{{ content.views }}</td>
                     </tr>
                 </tbody>
             </table>
         </section>
 
         <section id="featured-images">
-            <h2>Featured Jerseys</h2>
+            <h2>Featured Images</h2>
             <div class="image-grid">
                 <img v-for="image in featuredImages" :key="image.id" :src="image.src" :alt="image.alt" class="gallery-image">
             </div>
