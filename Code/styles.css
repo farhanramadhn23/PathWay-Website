@@ -1,0 +1,141 @@
+html
+/* Apply styles to the body and create a dynamic RGB background */
+body {
+    background: linear-gradient(45deg, #ff1493, #ff00a9, #00eaff, #00ff77, 
+    #ffec00);
+    background-size: 400% 400%;
+    animation: gradient 15s linear infinite;
+    color: #ccc;
+    font-family: 'Arial', sans-serif; 
+}
+@keyframes gradient {
+    0% {
+    background-position: 0% 50%;
+    }
+    100% {
+    background-position: 100% 50%;
+    }
+}
+
+/* Style the image grid */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+/* Style the gallery images */
+.gallery-image {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+/* Style the header and navigation */
+header {
+    text-align: relative;
+    padding: 20px;
+}
+h1 {
+    font-size: 3rem;
+    color: #f1f0ec;
+    font-family: 'Orbitron', sans-serif;
+}
+/* Style the navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+nav li {
+    margin: 0;
+}
+nav a {
+    text-decoration: none;
+    color: #f1f0ec;
+    transition: color 0.3s;
+    font-family: 'Orbitron', sans-serif; /* Ganti font pada menu navigasi 
+    dengan 'Orbitron' atau font futuristik lainnya */
+}
+nav a:hover {
+    color: purple;
+}
+/* Style the sections */
+section {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+h2 {
+    font-size: 2rem;
+    color: #f1f0ec;
+    font-family: 'Orbitron', sans-serif;
+}
+/* Style the forms */
+form {
+    background: transparent;
+    padding: 20px;
+    border-radius: 10px;
+}
+label {
+    display: block;
+    color: #f1f0ec;
+    margin: 10px 0;
+    font-family: 'Arial', sans-serif;
+}
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    background: black;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Arial', sans-serif;
+}
+
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    background: black;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Arial', sans-serif;
+}
+
+input[type="submit"] {
+    background: #f1f0ec;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+}
+input[type="submit"]:hover {
+    background: rgb(249, 121, 249);
+}
+
+button[type="submit"] {
+    background: #f1f0ec;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+}
+button[type="submit"]:hover {
+    background: rgb(249, 121, 249);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
