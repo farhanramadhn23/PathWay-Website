@@ -2,15 +2,15 @@
 new Vue({
     el: '#app',
     data: {
-        siteName: 'Jerseycustom',
+        siteName: 'PathWay',
         profileInfo: {
             paragraph1: 'Discover the beauty of the world through our collection of interesting images and content. PathWay is the place where you can explore and share the most beautiful moments from various corners of the world.',
             paragraph2: 'PathWay is here to provide an extraordinary visual experience. With a curated collection of images carefully, we strive to bring the beauty of the world directly to your screen. Make every special moment with PathWay!'
         },
         featuredContent: [
-            { id: 1, title: 'Chino', category: 'Pants', order: 5000 },
-            { id: 2, title: 'Oversize Shirt', category: 'Shirt', order: 8000 },
-            { id: 3, title: 'Hoodie', category: 'Outerwear', order: 3000 }
+            { id: 1, title: 'Love', category: 'Comedy'},
+            { id: 2, title: 'Badass', category: 'Action'},
+            { id: 3, title: 'Cool', category: 'Outlook'}
         ],
         featuredImages: [
             { id: 1, src: 'suzume fond ecran.jpg', alt: 'Featured Image 1' },
