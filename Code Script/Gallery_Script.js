@@ -2,7 +2,7 @@
 new Vue({
     el: '#app',
     data: {
-        siteName: 'Jerseycustom',
+        siteName: 'PathWay',
         galleryImages: [
             { src: 'download (1).jpg', alt: 'Image 1' },
             { src: 'download (7).jpg', alt: 'Image 2' },
