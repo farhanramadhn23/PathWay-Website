@@ -1,0 +1,100 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Orbitron:wght@700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <title>Jerseycustom.com</title>
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <h1>{{ siteName }}</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="Jelajahi.html">Jelajahi</a></li>
+                <li><a href="Gallery.html">Product</a></li>
+                <li><a href="Contact.html">Pesanan</a></li>
+            </ul>
+        </nav>
+
+        <section>
+            <h2>Welcome.</h2>
+            <div class="profil-info">
+                <p>
+                    {{ profileInfo.paragraph1 }}
+                </p>
+                <p>
+                    {{ profileInfo.paragraph2 }}
+                </p>
+            </div>
+        </section>
+
+        <!-- Tambahkan tabel dengan konten bebas -->
+        <section>
+            <h2>Category</h2>
+            <table border="1" cellspacing="0" cellpadding="10">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Model</th>
+                        <th>Category</th>
+                        <th>Order</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="content in featuredContent" :key="content.id">
+                        <td>{{ content.id }}</td>
+                        <td>{{ content.title }}</td>
+                        <td>{{ content.category }}</td>
+                        <td>{{ content.views }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="featured-images">
+            <h2>Featured Jerseys</h2>
+            <div class="image-grid">
+                <img v-for="image in featuredImages" :key="image.id" :src="image.src" :alt="image.alt" class="gallery-image">
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <h2>What Our Users Say</h2>
+            <ol>
+                <li v-for="testimonial in testimonials" :key="testimonial.id">
+                    "{{ testimonial.comment }}"
+                </li>
+            </ol>
+        </section>
+
+        <section id="subscribe">
+            <h2>Subscribe to Our Newsletter</h2>
+            <form id="subscribe-form" @submit.prevent="subscribe">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" v-model="email" required>
+                <br>
+                <br>
+                <input type="submit" value="Subscribe">
+            </form>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 {{ siteName }}. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
