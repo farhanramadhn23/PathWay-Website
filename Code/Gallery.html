@@ -1,0 +1,66 @@
+<!-- Gallery.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Orbitron:wght@700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <title>PathWay.com</title>
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <h1>{{ siteName }}</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="Jelajahi.html">Jelajahi</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section>
+            <h2>Gallery</h2>
+            <div class="image-grid">
+                <img v-for="(image, index) in galleryImages" :key="index" :src="image.src" :alt="image.alt" class="gallery-image">
+            </div>
+        </section>
+
+        <section>
+            <h2>About Us</h2>
+            <p>
+                Welcome to PathWay, a place where we capture beautiful moments through image galleries. Discover natural and human diversity through our lens. Join us in exploring the beauty of this world.
+            </p>
+        </section>
+
+        <section>
+            <h2>Comments</h2>
+            <form @submit.prevent="submitComment">
+                <label for="name">Name:</label>
+                <input type="text" id="name" v-model="commentData.name" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" v-model="commentData.message" rows="4" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </section>
+
+        <footer>
+            <!-- Footer website Anda -->
+            <p>&copy; 2023 {{ siteName }} All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script3.js"></script>
+</body>
+
+</html>
