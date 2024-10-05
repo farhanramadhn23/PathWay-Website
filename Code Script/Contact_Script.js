@@ -2,7 +2,7 @@
 new Vue({
     el: '#app',
     data: {
-        siteName: 'Jerseycustom',
+        siteName: 'PathWay',
         formData: {
             name: '',
             email: '',
